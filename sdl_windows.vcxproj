@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1F2CE354-D9C9-4A63-B276-EF43C5279BA7}</ProjectGuid>
+    <RootNamespace>sdl_windows</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\SDL-1.2.14\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\SDL-1.2.14\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\SDL-1.2.14\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>C:\SDL-1.2.14\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;SDL_ttf.lib;SDL_gfx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;SDL_ttf.lib;SDL_gfx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="APP_AutoBuilderWindow.cpp" />
+    <ClCompile Include="APP_BuildWindow.cpp" />
+    <ClCompile Include="APP_GenerateWindow.cpp" />
+    <ClCompile Include="APP_InfoWindow.cpp" />
+    <ClCompile Include="APP_MenuWindow.cpp" />
+    <ClCompile Include="APP_StationWindow.cpp" />
+    <ClCompile Include="APP_TrainWindow.cpp" />
+    <ClCompile Include="GAM_AStar.cpp" />
+    <ClCompile Include="GAM_Map.cpp" />
+    <ClCompile Include="GAM_Train.cpp" />
+    <ClCompile Include="GAM_TrainCar.cpp" />
+    <ClCompile Include="GFX_SpriteManager.cpp" />
+    <ClCompile Include="GFX_Tweener.cpp" />
+    <ClCompile Include="GUI_Alert.cpp" />
+    <ClCompile Include="GUI_Button.cpp" />
+    <ClCompile Include="GUI_Canvas.cpp" />
+    <ClCompile Include="GUI_FullButton.cpp" />
+    <ClCompile Include="GUI_Image.cpp" />
+    <ClCompile Include="GUI_Notifier.cpp" />
+    <ClCompile Include="GUI_Numeric.cpp" />
+    <ClCompile Include="GUI_ShadowedTextField.cpp" />
+    <ClCompile Include="GUI_TextButton.cpp" />
+    <ClCompile Include="GUI_ToggleList.cpp" />
+    <ClCompile Include="GUI_Widget.cpp" />
+    <ClCompile Include="GUI_ImageButton.cpp" />
+    <ClCompile Include="GUI_TextField.cpp" />
+    <ClCompile Include="GUI_ToggleButton.cpp" />
+    <ClCompile Include="GUI_Window.cpp" />
+    <ClCompile Include="GUI_WindowManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainApp.cpp" />
+    <ClCompile Include="SDL_tools.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="APP.h" />
+    <ClInclude Include="APP_AutoBuilderWindow.h" />
+    <ClInclude Include="APP_BuildWindow.h" />
+    <ClInclude Include="APP_GenerateWindow.h" />
+    <ClInclude Include="APP_InfoWindow.h" />
+    <ClInclude Include="APP_MenuWindow.h" />
+    <ClInclude Include="APP_StationWindow.h" />
+    <ClInclude Include="APP_TrainWindow.h" />
+    <ClInclude Include="GAM.h" />
+    <ClInclude Include="GAM_AStar.h" />
+    <ClInclude Include="GAM_Costs.h" />
+    <ClInclude Include="GAM_Map.h" />
+    <ClInclude Include="GAM_Rect.h" />
+    <ClInclude Include="GAM_Train.h" />
+    <ClInclude Include="GAM_TrainCar.h" />
+    <ClInclude Include="GFX.h" />
+    <ClInclude Include="GFX_SpriteManager.h" />
+    <ClInclude Include="GFX_SpriteNames.h" />
+    <ClInclude Include="GFX_Tweener.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="GUI_Alert.h" />
+    <ClInclude Include="GUI_Button.h" />
+    <ClInclude Include="GUI_Canvas.h" />
+    <ClInclude Include="GUI_FullButton.h" />
+    <ClInclude Include="GUI_Image.h" />
+    <ClInclude Include="GUI_Notifier.h" />
+    <ClInclude Include="GUI_Numeric.h" />
+    <ClInclude Include="GUI_ShadowedTextField.h" />
+    <ClInclude Include="GUI_ToggleButton.h" />
+    <ClInclude Include="GUI_TextButton.h" />
+    <ClInclude Include="GUI_ToggleList.h" />
+    <ClInclude Include="GUI_Widget.h" />
+    <ClInclude Include="GUI_ImageButton.h" />
+    <ClInclude Include="GUI_TextField.h" />
+    <ClInclude Include="GUI_Window.h" />
+    <ClInclude Include="GUI_WindowManager.h" />
+    <ClInclude Include="MainApp.h" />
+    <ClInclude Include="SDL_tools.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
